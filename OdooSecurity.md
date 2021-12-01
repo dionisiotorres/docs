@@ -4,6 +4,7 @@
 - https://github.com/Alliantum/odoo_easy_permissions
 - https://github.com/OCA/server-backend/tree/12.0/base_user_role
 - https://www.youtube.com/watch?v=wgPtgPbY4uc
+- https://www.youtube.com/watch?v=5B04XH6jdP8
 
 ## Groups
 - Defined in security folder within a XML file
@@ -24,9 +25,14 @@
         <field name="description">Some text explaining the category</field>
         <field name="sequence">10</field>
     </record>
-    <record id="my_group_id" model="res.groups">
-        <field name="name">Group Name</field>
+    <record id="my_group_one_id" model="res.groups">
+        <field name="name">Group Name One</field>
         <field name="category_id" ref="addon_name.module_category_id"/>
+    </record>
+    <record id="my_group_two_id" model="res.groups">
+        <field name="name">Group Name Two</field>
+        <field name="category_id" ref="addon_name.module_category_id"/>
+        <field name="implied_ids" eval="[(4, ref('addon_name.my_group_one_id'))]"/>
     </record>
 </odoo>
 ```

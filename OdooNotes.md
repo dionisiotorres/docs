@@ -15,4 +15,8 @@
 
 - [Odoo Security](OdooSecurity.md)
 
+## Odoo Smart Buttons
+
+- [Smart Buttons](SmartButtons.md)
+
 
