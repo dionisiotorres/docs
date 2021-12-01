@@ -1,2 +1,3 @@
-# odoo-docs
-Odoo noted
+# ODOO DOCS
+
+[Odoo Notes](OdooNotes.md)
