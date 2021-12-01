@@ -25,3 +25,6 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_id,access.name,addon.model_model_name_id,addon.group_id,1,1,1,0
 ```
+| id        | name        | model_id:id               | group_id:id    | perm_read | perm_write | perm_create | perm_unlink |
+| --------- | ----------- | ------------------------- | -------------- | --------- | ---------- | ----------- | ----------- |
+| access_id | access.name | addon.model_model_name_id | addon.group_id | 1         | 1          | 1           | 0           |
