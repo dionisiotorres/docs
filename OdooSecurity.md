@@ -6,7 +6,7 @@
 - https://www.youtube.com/watch?v=wgPtgPbY4uc
 
 ## Groups
-- Defined in security folder in a XML file
+- Defined in security folder within a XML file
 ```xml
 <record id="my_group_id" model="res.groups">
     <field name="name">Group Name</field>
@@ -20,4 +20,8 @@
 ## Access Rights
 - Related with Groups
 - Defined on ir.model.access.csv file on security folder
-- For each model
+- Defined for each model
+```csv
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_id,access.name,addon.model_model_name_id,addon.group_id,1,1,1,0
+```
