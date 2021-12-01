@@ -14,6 +14,9 @@
 ## Odoo Security
 
 - [Odoo Security](OdooSecurity.md)
+## Odoo Translations & Internationalization
+
+- [Translations](Translations.md)
 
 ## Odoo Smart Buttons
 
