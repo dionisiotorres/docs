@@ -3,6 +3,8 @@
 ## Resources
 - https://stackoverflow.com/questions/51594309/override-translation-from-original-module
 - https://odoo-development.readthedocs.io/en/latest/dev/translation/overwrite-translation.html
+- https://www.youtube.com/watch?v=0Z4UJ3OC2Bw
+- https://www.sygel.es/blog/blog-de-sygel-2/post/traducciones-masivas-a-diferentes-idiomas-a-la-vez-7
 
 1. Export the translation file from the add-ons you want to override.
 2. Translate it using POEeit or similar.
@@ -19,4 +21,10 @@ You may need to change built-in translation via a module. You could be done via 
   model="ir.translation"
   name="_set_ids"
   eval="('ir.ui.menu,name', 'model', 'ru_RU', [ref('project.menu_main_pm')], 'Проекты Компании', 'Project')"/>
+```
+
+## Set field as translatable
+```python
+class MyClass(models.Model):
+  description = fields.Text('Description',translate=True)
 ```
