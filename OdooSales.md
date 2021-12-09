@@ -117,12 +117,98 @@ Quotation -> Sale Orders -> Invoices
     - Odoo does it automatically.
 
 ### Delivery Lead Times
+- https://youtu.be/dSoz37q1tBg
+- The during the order is "traveling" to the customer (hours, days or months..)
+- ![](img/sales/delivery-times.jpg)
+
+- Sales
+     - Products > Products > Product > Inventory (Tab) > Customer Lead Time
+     - Create Sale Order
+     - Confirm SO
+     - Then Order Date and in the Other Info tab can see Delivery Date (Expected)
+     - On the Smart Button "Delivery" you can see the Delivery Order (Stock.Picking model)
+     - For more security go Inventory > Config. > Settings > Advanced Scheduling
+        - Security LEad Time for Sales
+
+
+#### Quizz
+1. What's the impact of adding 2 days in customer lead time?
+    - The customer will have two extra days to validate his quotation
+    - Delivery orders will be scheduled 2 days before
+    - Delivery orders will be scheduled 2 days later(*)
+2. I have a customer lead time of 15 days. What will be the scheduled date for the delivery if the confirmation date is 01/23?
+    - 02/07(*)
+    - 02/08
+    - 02/06
+    - 01/08
+    - 01/06
+    - 01/07
 
 ### Dropshipping
-
-
+![](img/sales/dropshipping.jpg)
+- Purchase > Conf. > Settings > Logistics > Dropsipping
+- Go to Product > Inventory (Tab) > Enable Routes Dropsiphing
+- Add a vendor on the Purchase(tab) > Vendors
+- if there are many vendors (the first in list, can be reordered)
+- A purchase is automatically generated when the Sale Order is confirmed
+#### Quizz
+1. Do I need to install the Purchase app to use the Dropshipping feature?
+    - No
+    - Yes (*)
+2. When I confirm a quotation with a dropshipped product, what will be the status of the quotation?
+    - Waiting Another Operation
+    - Quotation
+    - Sales Order (?)
+    - Purchase Order
+3. What will happen when I receive the product of the dropshipped product in the purchase order?
+    - The delivery will automatically be moved to "done".(*)
+    - You will have to deliver the product
+    - You need to update your stock
+4. Where can I activate this Dropshipping feature ?
+    - In the settings of the Sales app configuration
+    - In the settings of the Purchase app configuration (*)
+    - In the general settings
+    - All of above
+    - None of above
 ## Pricelists
 
 ### Multiple
+![](img/sales/pricelist-multiple.jpg)
+
+- Sales > Conf. > Settings > Pricing > Pricelists > Multiple
+    - ... > Pricelists or Sales > Products > Pricelists
+- Create New Pricelist
+    - Specify products and variants
+    - Assign Pricelist to each Customer
+        - Contacts > Edit > Sales & Purchases (tab) > Pricelist
+#### Quizz
+1. Can I show the discounts I give to my customers?
+    - Yes (*)
+    - No
+    - Only if you use pricelists on all products
+    - Only if you use pricelists on a category of products
+2. How can I set up my pricelists so they will be used automatically in quotations?
+    - By adding the pricelist to a contact
+    - You need to add a price for the pricelist on the product form and reference the pricelist on a contact form (*)
+    - You can't do that
+    - By adding a price for them on a product form
+    - By adding a price for them on the contact form
+
 
 ### Computed
+![](img/sales/pricelist-computed.jpg)
+- Based on rules
+- Sales > Conf. > Settings > Pricing > Pricelists > Advances price rules
+
+
+#### Quizz
+1. Can I decide to set a minimum quantity to apply a discount based on a pricelist ?
+    - Yes (*)
+    - No
+    - Only with standard pricelists
+    - Only when using a pricelist based on weight
+2. How can I define a pricelist only for the US?
+    - By adding US to the pricelist's limited countries.
+    - By adding US to the pricelist's country groups. (*)
+    - By adding US to the pricelist's restricted countries.
+    - By adding US to the pricelist's promotional code.
