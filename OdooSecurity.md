@@ -5,6 +5,14 @@
 - https://github.com/OCA/server-backend/tree/12.0/base_user_role
 - https://www.youtube.com/watch?v=wgPtgPbY4uc
 - https://www.youtube.com/watch?v=5B04XH6jdP8
+- https://github.com/OCA/server-backend
+
+## ROLES (oca/https://github.com/OCA/server-backend/base_user_role)
+- https://github.com/OCA/server-backend/base_user_role
+### After install
+- IMPORTANT!!! Be careful if you assign admin user to a Role without Groups the user will lost all permissions. It is preferable not to assign roles to the administrator
+- After assign Role to a user. User is not shown anymore on users list if it is filtered by "Internal users". bug?
+![](img/roles-after-install.jpg)
 
 ## Groups
 - Defined in security folder within a XML file
