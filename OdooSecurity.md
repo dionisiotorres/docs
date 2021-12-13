@@ -7,8 +7,27 @@
 - https://www.youtube.com/watch?v=5B04XH6jdP8
 - https://github.com/OCA/server-backend
 
-## ROLES (oca/https://github.com/OCA/server-backend/base_user_role)
+## BASE USER ROLES (oca/https://github.com/OCA/server-backend/base_user_role)
 - https://github.com/OCA/server-backend/base_user_role
+
+### Considerations
+- define functional roles by aggregating low-level groups,
+- set user accounts with the predefined roles (roles are cumulative),
+- update groups of all relevant user accounts (all at once),
+- ensure that user accounts will have the groups defined in their roles
+(nothing more, nothing less). In other words, you can not set groups
+manually on a user as long as there is roles configured on it,
+- activate/deactivate roles depending on the date (useful to plan holidays, etc)
+- get a quick overview of roles and the related user accounts.
+- To configure this module, you need to go to *Configuration / Users / Roles*,
+and create a new role. From there, you can add groups to compose your role,
+and then associate users to it.
+- Define default roles for a new user by editing the user called
+"Default User" (look for "Inactive users").
+
+Consider create Default Role for Default User:
+![](img/security/default-role.jpg)
+
 ### After install
 - IMPORTANT!!! Be careful if you assign admin user to a Role without Groups the user will lost all permissions. It is preferable not to assign roles to the administrator
 - After assign Role to a user. User is not shown anymore on users list if it is filtered by "Internal users". bug?
